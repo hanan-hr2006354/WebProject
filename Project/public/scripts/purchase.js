@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
     console.log((userName))
     const productDetailsDiv = document.getElementById('one-purchase-container');
     productDetailsDiv.innerHTML = `
-        <img src="/public/images/${nImage}" alt="Item Image">
+        <img src="/public/images/${nImage}" alt="Item Image"> 
         <h4>Product Name: ${nName}</h4>
         <h4>Product Price: ${nPrice}</h4>
         <p>Description: </p>
@@ -21,8 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
         <div class="buttons">
             <button id="purchase-now-btn">Purchase Now</button>
         </div>
-    `;
-  
+    `;  
     const purchaseNowButton = document.getElementById('purchase-now-btn');
     purchaseNowButton.addEventListener('click', function () {
         const quantityChosen=parseInt(document.getElementById('quantity').value);//get Exact Quantity
@@ -30,12 +29,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (userBalance>=totalPrice) {//again depending on quantity chosen
                   userBalance=userBalance-totalPrice;
                     console.log(userBalance);
-  
                 } else {
                     alert('Insufficient balance to make the purchase.');
                 }
             })
-  
-    });
-  
-  
+    });  
